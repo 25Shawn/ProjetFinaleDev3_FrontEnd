@@ -1,13 +1,10 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import FormulaireAuthentification from "./FormulaireAuthentification.components";
-import FormulaireConnexion from "./FormulaireConnexion.components";
 import { FormattedMessage } from "react-intl";
+import { Link } from "react-router-dom";
 
 const Profile = () => {
   const [estAuthentifie, setEstAuthentifie] = useState(false);
-  const [estConnecte, setEstConnecte] = useState(false);
-  const [AUnCompte, setAUnCompte] = useState(false);
   const [utilisateur, setUtilisateur] = useState(null);
 
   const navigate = useNavigate();
@@ -29,22 +26,6 @@ const Profile = () => {
     localStorage.removeItem("token");
     navigate("/profil");
   };
-
-  if (estConnecte) {
-    return (
-      <div>
-        <FormulaireConnexion />
-      </div>
-    );
-  }
-
-  if (AUnCompte) {
-    return (
-      <div>
-        <FormulaireAuthentification />
-      </div>
-    );
-  }
 
   return (
     <div className="text-center bg-white p-8 rounded shadow">
@@ -75,27 +56,31 @@ const Profile = () => {
       </div>
 
       <div className="mt-6 flex justify-center">
-        <button
-          className="bg-blue-600 text-white py-2 px-6 rounded-full hover:bg-blue-500 transition-all duration-300 ease-in-out"
-          onClick={
-            estAuthentifie ? handleSeDeconnecter : () => setEstConnecte(true)
-          }
-        >
-          {estAuthentifie ? (
+        {estAuthentifie ? (
+          <Link
+            to="/profil"
+            className="bg-blue-600 text-white py-2 px-6 rounded-full hover:bg-blue-500 transition-all duration-300 ease-in-out"
+            onClick={handleSeDeconnecter}
+          >
             <FormattedMessage
               id="profil.seDeconnecter"
-              defaultMessage="Se d&eacute;connecter"
+              defaultMessage="Se déconnecter"
             />
-          ) : (
+          </Link>
+        ) : (
+          <Link
+            to="/connexion"
+            className="bg-blue-600 text-white py-2 px-6 rounded-full hover:bg-blue-500 transition-all duration-300 ease-in-out"
+          >
             <FormattedMessage
               id="profil.seConnecter"
               defaultMessage="Se connecter"
             />
-          )}
-        </button>
+          </Link>
+        )}
       </div>
 
-      {!AUnCompte && !estAuthentifie && (
+      {!estAuthentifie && (
         <div className="mt-4 flex justify-center items-center space-x-2">
           <p className="text-sm text-gray-700">
             <FormattedMessage
@@ -103,15 +88,15 @@ const Profile = () => {
               defaultMessage="Vous n'avez pas de compte ?"
             />
           </p>
-          <button
+          <Link
             className="bg-green-600 text-white py-2 px-4 rounded-full hover:bg-green-500 transition-all duration-300 ease-in-out"
-            onClick={() => setAUnCompte(true)}
+            to={"/inscription"}
           >
             <FormattedMessage
               id="profil.sinscrire"
               defaultMessage="S'inscrire"
             />
-          </button>
+          </Link>
         </div>
       )}
     </div>

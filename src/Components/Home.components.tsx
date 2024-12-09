@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import FormulaireDAjouterSeance from "./FormulaireAjout.components";
 import { FormattedMessage } from "react-intl";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [seances, setSeances] = useState<any[]>([]);
-  const [ajoute, setAjoute] = useState(false);
   const [typeSelectionne, setTypeSelectionne] = useState("");
   const [intensiteSelectionne, setIntensiteSelectionne] = useState("");
   const [tableauType] = useState<string[]>([]);
@@ -40,9 +39,6 @@ const Home = () => {
     }
   }, []);
 
-  if (ajoute) {
-    return <FormulaireDAjouterSeance seance={null} />;
-  }
   if (seances.length !== 0) {
     seances.forEach((seance) => {
       if (!tableauType.includes(seance.typeExercice)) {
@@ -249,17 +245,16 @@ const Home = () => {
         </div>
 
         <div className="flex justify-end">
-          <button
-            onClick={() => {
-              setAjoute(true);
-            }}
+          <Link
+            to="/ajouter"
+            state={{ seance: null }}
             className="bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700 transition-colors duration-300 mb-4 "
           >
             <FormattedMessage
               id="accueil.ajouter"
               defaultMessage="Ajouter une séance"
             />
-          </button>
+          </Link>
         </div>
 
         {filtreExecuter && (

@@ -5,7 +5,10 @@ import Navbar from "./Components/NavBar.components";
 import Sessions from "./Components/Session.components";
 import Profile from "./Components/Profile.components";
 import Footer from "./Components/Footer.components";
+import FormulaireConnexion from "./Components/FormulaireConnexion.components";
+import FormulaireAuthentification from "./Components/FormulaireAuthentification.components";
 
+import FormulaireDAjouterSeance from "./Components/FormulaireAjout.components";
 function App() {
   return (
     <Router>
@@ -14,12 +17,19 @@ function App() {
         <Navbar />
 
         {/* Contenu principal */}
-        <div className="flex-grow pb-8 w-1/2">
+        <div className="flex-grow pb-8 md:w-3/4 lg:w-1/2">
           {/* Ajoutez un padding-bottom ici pour espacer le footer */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/sessions" element={<Sessions />} />
             <Route path="/profil" element={<Profile />} />
+            <Route path="/connexion" element={<FormulaireConnexion />} />
+            <Route path="/ajouter" element={<FormulaireDAjouterSeance />} />
+            <Route path="/modifier" element={<FormulaireDAjouterSeance />} />
+            <Route
+              path="/inscription"
+              element={<FormulaireAuthentification />}
+            />
           </Routes>
         </div>
       </div>

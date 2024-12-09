@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
-import FormulaireDAjouterSeance from "./FormulaireAjout.components";
+
+import { Link, useNavigate } from "react-router-dom";
 const Sessions = () => {
   const [seances, setSeances] = useState<any[]>([]);
   const [modifier, setModifier] = useState(false);
@@ -10,6 +11,7 @@ const Sessions = () => {
   const [idSeanceASupprimer, setIdSeanceASupprimer] = useState(0);
   const [messageSuccess, setMessageSuccess] = useState("");
   const [seanceAModifier, setSeanceAModifier] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const id = localStorage.getItem("id");
@@ -82,26 +84,6 @@ const Sessions = () => {
         });
     }
   };
-  const modifierSeance = (seance: any) => {
-    setSeanceAModifier(seance);
-    setModifier(true);
-  };
-
-  if (ajouter) {
-    return (
-      <div>
-        <FormulaireDAjouterSeance seance={null} />
-      </div>
-    );
-  }
-
-  if (modifier && seanceAModifier !== 0) {
-    return (
-      <div>
-        <FormulaireDAjouterSeance seance={seanceAModifier} />
-      </div>
-    );
-  }
 
   return (
     <div className="text-center bg-white p-8 rounded shadow">
@@ -113,17 +95,16 @@ const Sessions = () => {
           />
         </h1>
         <div className="flex justify-end">
-          <button
-            onClick={() => {
-              setAjouter(true);
-            }}
+          <Link
+            to="/ajouter"
+            state={{ seance: null }}
             className="bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700 transition-colors duration-300 mb-4 "
           >
             <FormattedMessage
               id="accueil.ajouter"
               defaultMessage="Ajouter une séance"
             />
-          </button>
+          </Link>
         </div>
         <h3>{messageSuccess}</h3>
 
@@ -142,15 +123,16 @@ const Sessions = () => {
             >
               <div>
                 <div className="flex justify-between flex-col md:flex-row md:items-center">
-                  <button
-                    onClick={() => modifierSeance(seance)}
+                  <Link
+                    to={`/modifier`}
+                    state={{ seance }}
                     className="bg-yellow-500 text-white py-2 px-4 rounded w-full  mb-2 md:w-auto hover:bg-yellow-600 transition-transform transform hover:scale-105"
                   >
                     <FormattedMessage
                       id="seance.modifier"
                       defaultMessage="Modifier"
                     />
-                  </button>
+                  </Link>
 
                   <button
                     onClick={() => openPopup(seance.identifiant)}

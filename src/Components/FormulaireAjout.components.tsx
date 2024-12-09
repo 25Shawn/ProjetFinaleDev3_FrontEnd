@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
 
 interface FormulaireDAjouterSeanceProps {
   seance: any;
 }
 
-const FormulaireDAjouterSeance = ({
-  seance,
-}: FormulaireDAjouterSeanceProps) => {
+const FormulaireDAjouterSeance = () => {
+  const location = useLocation();
+  const { seance } = location.state || {};
+
   const [date, setDate] = useState(Date());
   const [typeExercice, setTypeExercice] = useState("");
   const [duree, setDuree] = useState("");
