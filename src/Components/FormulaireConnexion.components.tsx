@@ -1,10 +1,12 @@
 import { useState } from "react";
 import axios from "axios";
 import { FormattedMessage } from "react-intl";
+import { useNavigate } from "react-router-dom";
 const FormulaireConnexion = () => {
   const [nomUtilisateur, setNomUtilisateur] = useState("");
   const [motDePasse, setMotDePasse] = useState("");
-  const [erreur, setErreur] = useState(""); // Ajout d'un état pour l'erreur
+  const [erreur, setErreur] = useState("");
+  const navigate = useNavigate();
 
   const VerificationDonnees = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -48,7 +50,7 @@ const FormulaireConnexion = () => {
           JSON.stringify(response.data.token.username)
         );
         setErreur("");
-        window.location.href = "/profil";
+        navigate("/profil");
       })
       .catch((error) => {
         console.error(error);
