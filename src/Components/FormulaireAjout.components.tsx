@@ -3,10 +3,6 @@ import axios from "axios";
 import { useNavigate, useLocation } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
 
-interface FormulaireDAjouterSeanceProps {
-  seance: any;
-}
-
 const FormulaireDAjouterSeance = () => {
   const location = useLocation();
   const { seance } = location.state || {};

@@ -2,16 +2,12 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Sessions = () => {
   const [seances, setSeances] = useState<any[]>([]);
-  const [modifier, setModifier] = useState(false);
-  const [ajouter, setAjouter] = useState(false);
   const [popupVisible, setPopupVisible] = useState(false);
   const [idSeanceASupprimer, setIdSeanceASupprimer] = useState(0);
   const [messageSuccess, setMessageSuccess] = useState("");
-  const [seanceAModifier, setSeanceAModifier] = useState(0);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const id = localStorage.getItem("id");
