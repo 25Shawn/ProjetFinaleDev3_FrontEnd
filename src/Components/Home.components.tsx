@@ -48,6 +48,8 @@ const Home = () => {
       if (!tableauIntensite.includes(seance.niveauIntensite)) {
         tableauIntensite.push(seance.niveauIntensite);
       }
+
+      console.log(tableauIntensite);
     });
   }
   const filtreType = (type: string) => {
@@ -209,11 +211,24 @@ const Home = () => {
                     defaultMessage="Tous les niveaux d'intensité"
                   />
                 </option>
-                {tableauIntensite.map((intensite, index) => (
-                  <option key={index} value={intensite}>
-                    {intensite}
-                  </option>
-                ))}
+                <option value="Faible">
+                  <FormattedMessage
+                    id="formulaireAjout.faible"
+                    defaultMessage="Faible"
+                  />
+                </option>
+                <option value="Moderee">
+                  <FormattedMessage
+                    id="formulaireAjout.moderee"
+                    defaultMessage="Modérée"
+                  />
+                </option>
+                <option value="Elevee">
+                  <FormattedMessage
+                    id="formulaireAjout.elevee"
+                    defaultMessage="Élevée"
+                  />
+                </option>
               </select>
 
               <select
