@@ -1,0 +1,88 @@
+{
+    "navbar.titre": "Shawn Fitness",
+    "navbar.accueil": "Home",
+    "navbar.seances": "Sessions",
+    "navbar.profil": "Profile",
+
+    "accueil.titre": "Welcome to your fitness tracking application",
+    "accueil.description": "Track your sessions, reach your goals and stay motivated !",
+    "accueil.sous-titre": "Your sessions",
+    "accueil.ajouter": "Add a session",
+    "accueil.messageErreur": "No session found",
+    "accueil.messageErreur2": "If it doesn't work after 30 seconds, reconnect to your account and try again.",
+    "accueil.filtreType": "Filter by type of exercise :",
+    "accueil.tousLesTypes": "All types",
+    "accueil.filtreMoyenneTypeIntensite": "Filter average time by type of exercise and intensity :",
+    "accueil.NiveauIntensite": "All intensities",
+
+    "accueil.moyenneTypeIntensiteP1": "Average time by ",
+    "accueil.moyenneTypeIntensiteP2": " and intensity ",
+    "accueil.filtre": "Filter",
+
+    "seance.date": "Date: ",
+    "seance.duree": "Duration: ",
+    "seance.calories": "Calories Burned: ",
+    "seance.distance": "Distance: ",
+    "seance.objectif": "Goal: ",
+    "seance.intensite": "Intensity: ",
+    "seance.commentaires": "Comments: ",
+    "seance.status": "Status: ",
+    "seance.completer": "Completed: ",
+    "seance.estComplet": " Completed",
+    "seance.noncomplet": " Not Completed",
+
+    "footer.titre": "2024 My Fitness Tracking Application. All rights reserved.",
+
+    "profil.titre": "Your profile",
+    "profil.estConnecte": "You are logged in",
+    "profil.estNonConnecte": "Log in to access your profile.",
+    "profil.seConnecter": "Log in",
+    "profil.seDeconnecter": "Log out",
+    "profil.pasDeCompte": "Don't have an account?",
+    "profil.sinscrire": "Sign up",
+
+    "formulaireAuthentification.titre": "Inscription Form",
+    "formulaireAuthentification.description": "Please enter your login information.",
+    "formulaireAuthentification.nomUtilisateur": "Username *:",
+    "formulaireAuthentification.motDePasse": "Password *:",
+    "formulaireAuthentification.connexion": "Log in",
+
+
+    "formulaireConnexion.titre": "Login Form",
+
+    "seance.supprimer": "Delete a session",
+    "seance.modifier": "Modify a session",
+
+    "popup.confirmation" : "Confirm",
+    "popup.cancelation" : "Cancel",
+    "popup.message" : "Are you sure you want to delete this session ?",
+    "popup.titre" : "Session deletion confirmation",
+
+    "formulaireAjout.titre" : "Add a new session",
+    "formulaireAjout.date" : "Date *:",
+    "formulaireAjout.typeExercice" : "Type of exercise *:",
+    "formulaireAjout.duree" : "Duration *:",
+    "formulaireAjout.caloriesBrulees" : "Calories burned *:",
+    "formulaireAjout.distance" : "Distance *:",
+    "formulaireAjout.objectif" : "Goal *:",
+    "formulaireAjout.niveauIntensite" : "Intensity *:",
+    "formulaireAjout.commentaire" : "Comments :",
+    "formulaireAjout.selectionner" : "Select",
+    "formulaireAjout.faible" : "Weak",
+    "formulaireAjout.moderee" : "Moderate",
+    "formulaireAjout.elevee" : "High",
+    "formulaireAjout.completer" : "Session completed ?",
+    "formulaireAjout.ajouter" : "Add a session",
+
+
+    "formulaireModifier.titre" : "Modify a session",
+    "formulaireModifier.date" : "Date :",
+    "formulaireModifier.typeExercice" : "Type of exercise :",
+    "formulaireModifier.duree" : "Duration :",
+    "formulaireModifier.caloriesBrulees" : "Calories burned :",
+    "formulaireModifier.distance" : "Distance :",
+    "formulaireModifier.objectif" : "Goal :",
+    "formulaireModifier.niveauIntensite" : "Intensity :",
+    "formulaireModifier.modifier" : "Modify a session"
+
+}

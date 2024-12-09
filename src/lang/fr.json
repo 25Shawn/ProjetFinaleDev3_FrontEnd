@@ -1,0 +1,91 @@
+{
+    "navbar.titre": "Shawn Fitness",
+    "navbar.accueil": "Accueil",
+    "navbar.seances": "Mes séances",
+    "navbar.profil": "Mon profil",
+
+    "accueil.titre": "Bienvenue sur votre application de suivi de fitness",
+    "accueil.description": "Suivez vos séances, atteignez vos objectifs et restez motivé !",
+
+    "accueil.sous-titre": "Vos séances",
+    "accueil.ajouter": "Ajouter une séance",
+    "accueil.messageErreur": "Aucune séance trouvée",
+    "accueil.messageErreur2": "Si sa ne marche pas après une 30 secondes, reconnectez-vous à votre compte et essayez de nouveau.",
+    "accueil.filtreType": "Filtrer par type d'exercice :",
+    "accueil.tousLesTypes": "Tous les types",
+    "accueil.filtreMoyenneTypeIntensite": "Filtrer moyenne de temps par type d'exercice et l'intensité :",
+    "accueil.NiveauIntensite": "Tous les niveaux d'intensité",
+
+    "accueil.moyenneTypeIntensiteP1": "Moyenne de temps par ",
+    "accueil.moyenneTypeIntensiteP2": " et l'intensité ",
+    "accueil.filtre": "Filtrer",
+
+    
+
+    "seance.date": "Date: ",
+    "seance.duree": "Durée: ",
+    "seance.calories": "Calories Brûlées: ",
+    "seance.distance": "Distance: ",
+    "seance.objectif": "Objectif: ",
+    "seance.intensite": "Intensité: ",
+    "seance.commentaires": "Commentaires: ",
+    "seance.status": "Status: ",
+    "seance.completer": "Complété: ",
+    "seance.estComplet": " Complété",
+    "seance.noncomplet": " Non Complété",
+
+    "footer.titre": "2024 Mon Application de Suivi de Fitness. Tous droits reservé.",
+
+    "profil.titre": "Mon profil",
+    "profil.estConnecte": "Vous êtes connecté",
+    "profil.estNonConnecte": "Connectez-vous pour accéder à votre profil.",
+    "profil.seConnecter": "Se connecter",
+    "profil.seDeconnecter": "Se déconnecter",
+    "profil.pasDeCompte": "Vous n'avez pas de compte ?",
+    "profil.sinscrire": "S'inscrire",
+
+    "formulaireAuthentification.titre": "Formulaire d'inscription",
+    "formulaireAuthentification.description": "Veuillez entrer vos informations de connexion.",
+    "formulaireAuthentification.nomUtilisateur": "Nom d'utilisateur *:",
+    "formulaireAuthentification.motDePasse": "Mot de passe *:",
+    "formulaireAuthentification.connexion": "Se connecter",
+
+    "formulaireConnexion.titre": "Formulaire de connexion",
+
+    "seance.supprimer": "Supprimer une séance",
+    "seance.modifier": "Modifier une séance",
+
+    "popup.confirmation" : "Confirmer",
+    "popup.cancelation" : "Annuler",
+    "popup.message" : "Êtes-vous sûr de vouloir supprimer cette séance ?",
+    "popup.titre" : "Confirmation de suppression",
+
+    "formulaireAjout.titre" : "Ajouter une nouvelle séance",
+    "formulaireAjout.date" : "Date *:",
+    "formulaireAjout.typeExercice" : "Type d'exercice *:",
+    "formulaireAjout.duree" : "Durée *:",
+    "formulaireAjout.caloriesBrulees" : "Calories brûlées *:",
+    "formulaireAjout.distance" : "Distance *:",
+    "formulaireAjout.objectif" : "Objectif *:",
+    "formulaireAjout.niveauIntensite" : "Niveau d'intensité *:",
+    "formulaireAjout.commentaire" : "Commentaire :",
+    "formulaireAjout.selectionner" : "Selectionner",
+    "formulaireAjout.faible" : "Faible",
+    "formulaireAjout.moderee" : "Moderee",
+    "formulaireAjout.elevee" : "Elevee",
+    "formulaireAjout.completer" : "Séance complétée ?",
+    "formulaireAjout.ajouter" : "Ajouter une séance",
+
+
+    "formulaireModifier.titre" : "Modifier une séance",
+    "formulaireModifier.date" : "Date :",
+    "formulaireModifier.typeExercice" : "Type d'exercice :",
+    "formulaireModifier.duree" : "Durée :",
+    "formulaireModifier.caloriesBrulees" : "Calories brùlées :",
+    "formulaireModifier.distance" : "Distance :",
+    "formulaireModifier.objectif" : "Objectif :",
+    "formulaireModifier.niveauIntensite" : "Niveau d'intensité :",
+    "formulaireModifier.modifier" : "Modifier une séance"
+
+    
+}
