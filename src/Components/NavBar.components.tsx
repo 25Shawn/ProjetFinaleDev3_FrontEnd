@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FormattedMessage } from "react-intl";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -12,12 +13,12 @@ const Navbar = () => {
     <nav className="bg-blue-600 text-white shadow-md fixed top-0 left-0 w-full z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <a href="/" className="text-lg font-bold hover:text-blue-200">
+          <Link to="/" className="text-lg font-bold hover:text-blue-200">
             <FormattedMessage
               id="navbar.titre"
               defaultMessage="Shawn Fitness"
             />
-          </a>
+          </Link>
 
           <div className="md:hidden">
             <button
@@ -43,41 +44,41 @@ const Navbar = () => {
           </div>
 
           <div className="hidden md:flex space-x-6">
-            <a href="/" className="hover:text-blue-200">
+            <Link to="/" className="hover:text-blue-200">
               <FormattedMessage id="navbar.accueil" defaultMessage="Accueil" />
-            </a>
-            <a href="/sessions" className="hover:text-blue-200">
+            </Link>
+            <Link to="/sessions" className="hover:text-blue-200">
               <FormattedMessage
                 id="navbar.seances"
                 defaultMessage="Mes séances"
               />
-            </a>
-            <a href="/profil" className="hover:text-blue-200">
+            </Link>
+            <Link to="/profil" className="hover:text-blue-200">
               <FormattedMessage
                 id="navbar.profil"
                 defaultMessage="Mon profil"
               />
-            </a>
+            </Link>
           </div>
         </div>
 
         {menuVisible && (
           <div className="md:hidden bg-blue-500 text-white">
-            <a href="/" className="block px-4 py-2 hover:bg-blue-700">
+            <Link to="/" className="block px-4 py-2 hover:bg-blue-700">
               <FormattedMessage id="navbar.accueil" defaultMessage="Accueil" />
-            </a>
-            <a href="/sessions" className="block px-4 py-2 hover:bg-blue-700">
+            </Link>
+            <Link to="/sessions" className="block px-4 py-2 hover:bg-blue-700">
               <FormattedMessage
                 id="navbar.seances"
                 defaultMessage="Mes séances"
               />
-            </a>
-            <a href="/profil" className="block px-4 py-2 hover:bg-blue-700">
+            </Link>
+            <Link to="/profil" className="block px-4 py-2 hover:bg-blue-700">
               <FormattedMessage
                 id="navbar.profil"
                 defaultMessage="Mon profil"
               />
-            </a>
+            </Link>
           </div>
         )}
       </div>
