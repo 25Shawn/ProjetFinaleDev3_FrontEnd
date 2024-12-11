@@ -64,16 +64,28 @@ const Navbar = () => {
 
         {menuVisible && (
           <div className="md:hidden bg-blue-500 text-white">
-            <Link to="/" className="block px-4 py-2 hover:bg-blue-700">
+            <Link
+              to="/"
+              className="block px-4 py-2 hover:bg-blue-700"
+              onClick={afficherMenuDeroulant}
+            >
               <FormattedMessage id="navbar.accueil" defaultMessage="Accueil" />
             </Link>
-            <Link to="/sessions" className="block px-4 py-2 hover:bg-blue-700">
+            <Link
+              to="/sessions"
+              className="block px-4 py-2 hover:bg-blue-700"
+              onClick={afficherMenuDeroulant}
+            >
               <FormattedMessage
                 id="navbar.seances"
                 defaultMessage="Mes séances"
               />
             </Link>
-            <Link to="/profil" className="block px-4 py-2 hover:bg-blue-700">
+            <Link
+              to="/profil"
+              className="block px-4 py-2 hover:bg-blue-700"
+              onClick={afficherMenuDeroulant}
+            >
               <FormattedMessage
                 id="navbar.profil"
                 defaultMessage="Mon profil"

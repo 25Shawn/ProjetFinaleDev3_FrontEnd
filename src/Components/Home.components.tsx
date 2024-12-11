@@ -225,7 +225,7 @@ const Home = () => {
                 </option>
                 <option value="Elevee">
                   <FormattedMessage
-                    id="formulaireAjout.elevee"
+                    id="formulaireAjout.Elevee"
                     defaultMessage="Élevée"
                   />
                 </option>
