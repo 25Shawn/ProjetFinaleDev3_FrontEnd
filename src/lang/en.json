@@ -19,6 +19,8 @@
     "accueil.moyenneTypeIntensiteP2": " and intensity ",
     "accueil.filtre": "Filter",
 
+    "session.messageSuccess": "Session deleted successfully !",
+
     "seance.date": "Date: ",
     "seance.duree": "Duration: ",
     "seance.calories": "Calories Burned: ",

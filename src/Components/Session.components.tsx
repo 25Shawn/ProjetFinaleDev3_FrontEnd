@@ -7,7 +7,7 @@ const Sessions = () => {
   const [seances, setSeances] = useState<any[]>([]);
   const [popupVisible, setPopupVisible] = useState(false);
   const [idSeanceASupprimer, setIdSeanceASupprimer] = useState(0);
-  const [messageSuccess, setMessageSuccess] = useState("");
+  const [messageSuccess, setMessageSuccess] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -71,8 +71,11 @@ const Sessions = () => {
         .then((response) => {
           console.log(response.data);
 
-          setMessageSuccess("Séance supprimée");
-          navigate("/");
+          setMessageSuccess(true);
+          setTimeout(() => {
+            setMessageSuccess(false);
+            navigate("/");
+          }, 3000);
         })
         .catch((error) => {
           console.error("Error fetching seances:", error);
@@ -101,7 +104,19 @@ const Sessions = () => {
             />
           </Link>
         </div>
-        <h3>{messageSuccess}</h3>
+        {messageSuccess && (
+          <div
+            className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-md mb-4 shadow-lg animate-fade-in"
+            role="alert"
+          >
+            <p className="text-sm">
+              <FormattedMessage
+                id="session.messageSuccess"
+                defaultMessage="Séance supprimée avec successe"
+              />
+            </p>
+          </div>
+        )}
 
         {seances.length === 0 ? (
           <p className="text-center text-gray-500">
