@@ -1,11 +1,13 @@
 import { useState } from "react";
 import axios from "axios";
 import { FormattedMessage } from "react-intl";
+import { useNavigate } from "react-router-dom";
 
 const FormulaireAuthentification = () => {
   const [nomUtilisateur, setNomUtilisateur] = useState("");
   const [motDePasse, setMotDePasse] = useState("");
   const [erreur, setErreur] = useState("");
+  const navigate = useNavigate();
   const VerificationDonnees = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -48,7 +50,7 @@ const FormulaireAuthentification = () => {
         setErreur("");
         setNomUtilisateur("");
         setMotDePasse("");
-        window.location.href = "/profil";
+        navigate("/profil");
       })
       .catch((error) => {
         console.error("Erreur lors de la connexion:", error.response);

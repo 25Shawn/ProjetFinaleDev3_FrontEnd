@@ -145,7 +145,8 @@ const FormulaireDAjouterSeance = () => {
         .then((response) => {
           console.log("Response:", response.data);
           setSuccess("Séance modifiée avec succès");
-          window.location.href = "/sessions";
+
+          navigate("/sessions");
         })
         .catch((error) => {
           if (error.response) {
