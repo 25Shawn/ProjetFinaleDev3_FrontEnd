@@ -76,9 +76,6 @@ const Sessions = () => {
         })
         .catch((error) => {
           console.error("Error fetching seances:", error);
-        })
-        .finally(() => {
-          window.location.reload();
         });
     }
   };
