@@ -13,12 +13,9 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen flex items-center flex-col pt-20">
-        {/* Navbar toujours visible en haut */}
         <Navbar />
 
-        {/* Contenu principal */}
         <div className="flex-grow pb-8 md:w-3/4 lg:w-1/2">
-          {/* Ajoutez un padding-bottom ici pour espacer le footer */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/sessions" element={<Sessions />} />

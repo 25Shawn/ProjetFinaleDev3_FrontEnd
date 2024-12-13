@@ -11,6 +11,7 @@ const Profile = () => {
 
   useEffect(() => {
     const utilisateurStocke = localStorage.getItem("utilisateur");
+    console.log(utilisateurStocke);
     if (utilisateurStocke) {
       const utilisateurObj = JSON.parse(utilisateurStocke);
       setUtilisateur(utilisateurObj);

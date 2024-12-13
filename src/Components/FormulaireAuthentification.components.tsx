@@ -16,9 +16,6 @@ const FormulaireAuthentification = () => {
       return;
     }
 
-    // console.log("Nom d'utilisateur:", nomUtilisateur);
-    // console.log("Mot de passe:", motDePasse);
-
     const data = {
       utilisateur: {
         username: nomUtilisateur,
@@ -39,18 +36,12 @@ const FormulaireAuthentification = () => {
       .then((response) => {
         console.log(response.data);
 
-        const utilisateur = {
-          username: nomUtilisateur,
-          password: motDePasse,
-        };
-
-        localStorage.setItem("utilisateur", JSON.stringify(utilisateur));
         alert("Utilisateur authentifié avec succès.");
 
         setErreur("");
         setNomUtilisateur("");
         setMotDePasse("");
-        navigate("/profil");
+        navigate("/connexion");
       })
       .catch((error) => {
         console.error("Erreur lors de la connexion:", error.response);
