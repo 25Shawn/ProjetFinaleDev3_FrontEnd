@@ -41,7 +41,8 @@
     "profil.pasDeCompte": "Don't have an account?",
     "profil.sinscrire": "Sign up",
 
-    "formulaireAuthentification.titre": "Inscription Form",
+    "formulaireAuthentification.titre": "Sign up form",
+    "formulaireAuthentification.descriptionInscription": "Please enter your sign up information.",
     "formulaireAuthentification.description": "Please enter your login information.",
     "formulaireAuthentification.nomUtilisateur": "Username *:",
     "formulaireAuthentification.motDePasse": "Password *:",

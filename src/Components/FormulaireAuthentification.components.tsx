@@ -7,6 +7,7 @@ const FormulaireAuthentification = () => {
   const [nomUtilisateur, setNomUtilisateur] = useState("");
   const [motDePasse, setMotDePasse] = useState("");
   const [erreur, setErreur] = useState("");
+  const [estExcecuter, setEstExcecuter] = useState(false);
   const navigate = useNavigate();
   const VerificationDonnees = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -36,12 +37,15 @@ const FormulaireAuthentification = () => {
       .then((response) => {
         console.log(response.data);
 
-        //alert("Utilisateur authentifié avec succès.");
+        setEstExcecuter(true);
 
-        setErreur("");
-        setNomUtilisateur("");
-        setMotDePasse("");
-        navigate("/connexion");
+        setTimeout(() => {
+          setEstExcecuter(false);
+          setErreur("");
+          setNomUtilisateur("");
+          setMotDePasse("");
+          navigate("/connexion");
+        }, 4000);
       })
       .catch((error) => {
         console.error("Erreur lors de la connexion:", error.response);
@@ -51,6 +55,25 @@ const FormulaireAuthentification = () => {
 
   return (
     <div className="text-center bg-white p-8 rounded shadow">
+      {estExcecuter && (
+        <div
+          className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-md mb-4 shadow-lg animate-fade-in"
+          role="alert"
+        >
+          <p className="text-sm">
+            <FormattedMessage
+              id="formulaireAuthentification.notification"
+              defaultMessage="Inscription reussie !"
+            />
+          </p>
+          <p>
+            <FormattedMessage
+              id="formulaireAuthentification.notification2"
+              defaultMessage="Redirection vers la page de connexion..."
+            />
+          </p>
+        </div>
+      )}
       <h2 className="text-2xl text-gray-800 font-semibold mb-4">
         <FormattedMessage
           id="formulaireAuthentification.titre"
@@ -59,7 +82,7 @@ const FormulaireAuthentification = () => {
       </h2>
       <p className="text-sm text-gray-500 mb-6">
         <FormattedMessage
-          id="formulaireAuthentification.description"
+          id="formulaireAuthentification.descriptionInscription"
           defaultMessage="Veuillez entrer vos informations de connexion."
         />
       </p>

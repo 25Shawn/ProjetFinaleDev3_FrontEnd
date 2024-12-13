@@ -58,9 +58,9 @@ export default function LangueProvider({ children }: { children: ReactNode }) {
 
   return (
     <LangueContext.Provider value={{ langue, setLangue }}>
-      <div className="text-center bg-white rounded shadow mt-20 w-1/2 mx-auto">
+      <div className="text-center bg-white rounded shadow mt-20 w-1/5 mx-auto">
         <select
-          className="p-2 w-full"
+          className="p-2 w-full border border-gray-300 rounded shadow"
           value={langue.locale}
           onChange={handleLangueChange}
         >

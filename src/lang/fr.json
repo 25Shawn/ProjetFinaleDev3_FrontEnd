@@ -45,6 +45,7 @@
     "profil.sinscrire": "S'inscrire",
 
     "formulaireAuthentification.titre": "Formulaire d'inscription",
+    "formulaireAuthentification.descriptionInscription": "Veuillez entrer vos informations d'inscription.",
     "formulaireAuthentification.description": "Veuillez entrer vos informations de connexion.",
     "formulaireAuthentification.nomUtilisateur": "Nom d'utilisateur *:",
     "formulaireAuthentification.motDePasse": "Mot de passe *:",
