@@ -2,12 +2,13 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Sessions = () => {
   const [seances, setSeances] = useState<any[]>([]);
   const [popupVisible, setPopupVisible] = useState(false);
   const [idSeanceASupprimer, setIdSeanceASupprimer] = useState(0);
   const [messageSuccess, setMessageSuccess] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     const id = localStorage.getItem("id");
@@ -71,6 +72,7 @@ const Sessions = () => {
           console.log(response.data);
 
           setMessageSuccess("Séance supprimée");
+          navigate("/sessions");
         })
         .catch((error) => {
           console.error("Error fetching seances:", error);
