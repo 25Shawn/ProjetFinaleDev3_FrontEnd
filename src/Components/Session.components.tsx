@@ -72,9 +72,7 @@ const Sessions = () => {
           console.log(response.data);
 
           setMessageSuccess("Séance supprimée");
-          setTimeout(() => {
-            navigate("/sessions");
-          }, 3000);
+          navigate("/");
         })
         .catch((error) => {
           console.error("Error fetching seances:", error);
