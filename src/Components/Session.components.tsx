@@ -72,7 +72,7 @@ const Sessions = () => {
           console.log(response.data);
 
           setMessageSuccess("Séance supprimée");
-          navigate("/sessions");
+          window.location.reload();
         })
         .catch((error) => {
           console.error("Error fetching seances:", error);
