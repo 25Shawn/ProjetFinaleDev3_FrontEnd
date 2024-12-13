@@ -36,7 +36,7 @@ const FormulaireAuthentification = () => {
       .then((response) => {
         console.log(response.data);
 
-        alert("Utilisateur authentifié avec succès.");
+        //alert("Utilisateur authentifié avec succès.");
 
         setErreur("");
         setNomUtilisateur("");
